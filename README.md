@@ -123,7 +123,7 @@ WaterShopSystem/
 └── cctv.mp4                              → CCTV video input
 ```
 ---
-## 🛠️ Setup & Installation
+##  Setup & Installation
 
 Follow the steps below to set up the **Water Shop Monitoring & Analytics System**.
 This section includes only environment setup and required libraries.
