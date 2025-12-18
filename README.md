@@ -1,8 +1,8 @@
 # 💧 Water Shop Monitoring & Analytics System
 ### CCTV-Based Customer, Payment & Operational Analytics
 The **Water Shop Monitoring & Analytics System** automates customer tracking and operational analytics using computer vision and data analytics.
-
 The system identifies customers using **facial recognition**, tracks visit frequency, links transactions, detects unpaid customers, and analyzes peak business hours.
+
 ---
 
 ## ✅ Table of Contents
