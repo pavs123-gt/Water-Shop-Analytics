@@ -23,14 +23,14 @@ The system identifies customers using **facial recognition**, tracks visit frequ
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 The **Water Shop Monitoring & Analytics System** automates customer tracking and operational analytics using computer vision and data analytics.
 
 The system identifies customers using **facial recognition**, tracks visit frequency, links transactions, detects unpaid customers, and analyzes peak business hours.
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 - Identify customers using CCTV footage and facial recognition  
 - Assign unique customer IDs  
 - Track visit frequency per customer  
@@ -42,7 +42,7 @@ The system identifies customers using **facial recognition**, tracks visit frequ
 
 ---
 
-## 🚀 Features
+## Features
 - Face detection and recognition from CCTV videos  
 - Customer visit tracking and repeat analysis  
 - Transaction and payment mode analytics  
