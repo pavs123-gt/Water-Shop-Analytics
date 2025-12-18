@@ -123,4 +123,84 @@ WaterShopSystem/
 └── cctv.mp4                              → CCTV video input
 ```
 ---
+##  Setup & Installation
+
+Follow the steps below to set up the **Water Shop Monitoring & Analytics System**. This section includes **only environment setup and required libraries**, similar to your MFA example.
+
+---
+
+### 1️⃣ Create and Activate Conda Environment
+
+```bash
+conda create -n water_shop python=3.9 -y
+conda activate water_shop
+```
+
+---
+
+### 2️⃣ Install Core Data & Analytics Libraries
+
+```bash
+pip install pandas numpy scikit-learn
+```
+
+---
+
+### 3️⃣ Install Visualization Libraries
+
+```bash
+pip install matplotlib seaborn streamlit
+```
+
+---
+
+### 4️⃣ Install Computer Vision & Face Recognition Libraries
+
+```bash
+pip install opencv-python face_recognition
+```
+
+> ⚠️ `face_recognition` depends on **dlib**. If installation fails, ensure the following are installed:
+>
+> * CMake
+> * C++ compiler (build-essential / Visual Studio Build Tools)
+
+---
+
+### 5️⃣ Install Backend / API Libraries (Optional)
+
+```bash
+pip install fastapi uvicorn
+```
+
+---
+
+### 6️⃣ Install Database Libraries
+
+```bash
+pip install sqlalchemy
+```
+
+(Optional – for PostgreSQL)
+
+```bash
+pip install psycopg2-binary
+```
+
+---
+
+### 7️⃣ Verify Installation
+
+```bash
+python -c "import cv2, face_recognition, pandas, numpy, matplotlib, streamlit; print('Environment setup successful')"
+```
+
+---
+
+### ℹ️ Notes
+
+* Python 3.8–3.10 is recommended.
+* Use Conda for easier installation of `dlib` and OpenCV.
+* TensorFlow is optional and only required for advanced or future enhancements.
+* Compatible with Linux, macOS, and Windows.
 
