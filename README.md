@@ -101,4 +101,53 @@ python general_sample_transaction.py
 
 
 
+---
+WaterShopSystem/
+├── cctv.mp4
+├── generate_sample_transaction.py           # Generates sample_transaction.csv
+├── sample_transaction.csv                   # Generated file
+├── detection.py                             # Generates frames and detected_faces
+├── frames/                                  # Generated frames from video
+├── detected_faces/                          # Cropped faces from frames
+├── face_recognition_pipeline.py             # Generates customer_embeddings.pkl and recognition results
+├── customer_embeddings.pkl                  # Generated embeddings
+├── recognition_results.csv                  # Generated recognition results
+├── run_visit_tracking_hog.py                # Generates visit_log.csv
+├── visit_log.csv                             # Generated visit logs
+├── m_r_v.py                                 # Generates unique_customers.csv
+├── unique_customers.csv                      # Generated file
+├── visit_analytics.py                        # Generates daily, monthly, quarterly visits and repeat visits
+├── daily_visits.csv                          # Generated
+├── monthly_visits.csv                        # Generated
+├── quarterly_visits.csv                      # Generated
+├── repeat_visits.csv                          # Generated
+├── new_vs_returning_customers.py             # Generates customer visit counts and new/returning customers
+├── customer_visit_counts.csv                 # Generated
+├── new_customers.csv                          # Generated
+├── returning_customers.csv                   # Generated
+├── payment_and_can_analytics.py              # Generates analytics reports
+├── analytics_report.xlsx                      # Generated
+├── shop_activity_insights.xlsx                # Generated
+├── total_spend_per_customer.png               # Generated chart
+├── test_first_last_customers.csv              # Generated
+├── test_traffic_per_hour.csv                  # Generated
+├── plot_analytics_charts.py                   # Generates charts
+├── pie_vs_new_returning.png                    # Generated
+├── bar_top_customers.png                       # Generated
+├── bar_visits_per_hour.png                     # Generated
+├── line_daily_visits.png                       # Generated
+├── test_visit_tracking.py                      # Generates test visit files
+├── test_visit_counts.csv                       # Generated
+├── test_repeat_visitors.csv                    # Generated
+├── test_transaction.py                         # Generates test transaction files
+├── test_total_spent.csv                         # Generated
+├── test_payment_summary.csv                     # Generated
+├── test_unpaid.csv                              # Generated
+├── test_repeat_defaulters.csv                   # Generated
+├── test_can_shop_activity.py                    # Generates can activity reports
+├── test_can_per_customer.csv                     # Generated
+├── test_can_per_day.csv                          # Generated
+├── dashboard.py                                 # Streamlit dashboard
+├── dashboard_final.py                           # Final version of dashboard
+└── README.md                                    # Project description 
 
