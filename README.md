@@ -1,5 +1,5 @@
 
-##💧 Water Shop Analytics & Customer Behavior Analysis
+#💧 Water Shop Analytics & Customer Behavior Analysis
 
 A complete analytics pipeline for monitoring customer visits, water can usage, payments, and shop activity using transaction and visit data.
 The system processes CSV-based transaction logs, performs customer-wise and time-based analytics, and generates detailed reports for operational insights.
