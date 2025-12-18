@@ -101,7 +101,7 @@ python general_sample_transaction.py
 ---
 
 ### Project Structure
-
+---
 WaterShopSystem/
 ├── generate_sample_transaction.py
 ├── detection.py
@@ -118,5 +118,5 @@ WaterShopSystem/
 ├── dashboard.py
 ├── dashboard_final.py
 └── cctv.mp4
-
+---
 
