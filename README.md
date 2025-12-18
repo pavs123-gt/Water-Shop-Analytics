@@ -5,20 +5,21 @@ The system identifies customers using **facial recognition**, tracks visit frequ
 
 ---
 
-## ✅ Table of Contents
-- Project Overview  
-- Objectives  
-- Features  
-- System Architecture  
-- Dataset Format  
-- Project Structure  
-- Setup & Installation  
-- Processing Pipeline  
-- Analytics & Reports  
-- Dashboard & Visualization  
-- Tools Used  
-- Future Enhancements  
-- Author  
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Objectives](#objectives)
+- [Features](#features)
+- [System Architecture](#system-architecture)
+- [Dataset Format](#dataset-format)
+- [Project Structure](#project-structure)
+- [Setup & Installation](#setup--installation)
+- [Processing Pipeline](#processing-pipeline)
+- [Analytics & Reports](#analytics--reports)
+- [Dashboard & Visualization](#dashboard--visualization)
+- [Tools Used](#tools-used)
+- [Future Enhancements](#future-enhancements)
+- [Author](#author)
+ 
 
 ---
 
