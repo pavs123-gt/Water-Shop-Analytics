@@ -1,23 +1,13 @@
-# Water Shop Analytics Dashboard 💧
 
-## Project Overview
-This project analyzes CCTV and transaction data of a water shop to generate insights like:
-- Customer visits
-- Repeat customers
-- Can sales per day
-- Payment analysis
-- Auto-generated dashboards using Streamlit
+💧 Water Shop Analytics & Customer Behavior Analysis
 
-## Technologies Used
-- Python
-- Pandas
-- OpenCV
-- InsightFace
-- Streamlit
-- Matplotlib
+A complete analytics pipeline for monitoring customer visits, water can usage, payments, and shop activity using transaction and visit data.
+The system processes CSV-based transaction logs, performs customer-wise and time-based analytics, and generates detailed reports for operational insights.
 
-## How to Run
-```bash
-pip install -r requirements.txt
-streamlit run dashboard.py
+It analyzes total spend per customer, daily and hourly traffic patterns, payment modes, unpaid transactions, and repeat defaulters.
+The processed results are visualized through an interactive Streamlit dashboard, enabling easy monitoring of customer behavior and business performance without requiring a database or login system.
+
+
+
+
 
