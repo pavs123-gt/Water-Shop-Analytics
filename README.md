@@ -204,4 +204,142 @@ python -c "import cv2, face_recognition, insightface, pandas, numpy, matplotlib,
 - Conda is recommended for easier installation of OpenCV and dlib
 - TensorFlow is optional and not required for the current implementation
 - Compatible with Linux, macOS, and Windows
+---
+## 🔄 Processing & Pipeline
+
+The Water Shop Monitoring & Analytics System follows a structured pipeline to process CCTV footage and transaction data, generate analytics, and visualize insights through dashboards.
+
+---
+
+### 1️⃣ Data Ingestion
+
+**Input Sources:**
+- CCTV video footage (MP4)
+- Transaction data (CSV)
+- Visit logs and validation files (CSV)
+
+**Data Includes:**
+- Customer visit timestamps
+- Payment mode (Cash / UPI / Coin)
+- Number of water cans
+- Transaction amount
+- Unpaid / pending status
+
+---
+
+### 2️⃣ Video Processing Pipeline
+
+1. Extract frames from CCTV footage
+2. Detect faces in each frame using OpenCV
+3. Generate face embeddings using InsightFace / face_recognition
+4. Match embeddings with stored customer embeddings
+5. Assign unique customer IDs
+6. Log visit timestamp for each recognized customer
+
+**Output:**
+- recognition_results.csv
+- visit_log.csv
+- customer_visit_counts.csv
+
+---
+
+### 3️⃣ Visit Analytics Processing
+
+1. Aggregate visit logs
+2. Count visits per:
+   - Day
+   - Month
+   - Quarter
+3. Identify:
+   - New customers
+   - Returning customers
+   - Repeat visitors
+
+**Output Files:**
+- daily_visits.csv
+- monthly_visits.csv
+- quarterly_visits.csv
+- new_customers.csv
+- returning_customers.csv
+- visit_validation.csv
+
+---
+
+### 4️⃣ Transaction & Payment Processing
+
+1. Load transaction CSV data
+2. Link transactions to customer IDs
+3. Analyze payment modes
+4. Identify unpaid transactions
+5. Detect repeat defaulters
+
+**Output Files:**
+- sample_transactions.csv
+- test_payment_summary.csv
+- test_unpaid.csv
+- test_repeat_defaulters.csv
+- test_total_spent.csv
+
+---
+
+### 5️⃣ Can Analytics Processing
+
+1. Extract can quantity per transaction
+2. Aggregate total cans per customer
+3. Aggregate total cans per day
+
+**Output Files:**
+- test_cans_per_customer.csv
+- test_cans_per_day.csv
+
+---
+
+### 6️⃣ Traffic & Shop Activity Analysis
+
+1. Analyze visit timestamps
+2. Detect peak and idle hours
+3. Identify first and last customer of the day
+4. Estimate shop opening and closing times
+
+**Output Files:**
+- test_traffic_per_hours.csv
+- rest_first_last_customer.csv
+
+---
+
+### 7️⃣ Analytics Validation & Testing
+
+1. Cross-check visit counts
+2. Validate repeat visitor logic
+3. Verify unpaid and defaulter tagging
+4. Run test scripts for consistency
+
+**Test Files:**
+- test_visit_counts.csv
+- test_repeat_visitors.csv
+- test_visit_tracking.py
+- test_transactions.py
+
+---
+
+### 8️⃣ Dashboard & Visualization Pipeline
+
+1. Load all processed CSV outputs
+2. Generate visual analytics:
+   - Visit trends
+   - Customer behavior
+   - Can consumption
+   - Payment summaries
+3. Render interactive dashboard
+
+**Dashboard Scripts:**
+- dashboard.py
+- dashboard_final.py
+
+**Final Outputs:**
+- Integrated analytics dashboard
+- Business insights for shop operations
+
+---
+
 
