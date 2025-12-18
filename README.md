@@ -161,7 +161,7 @@ pip install matplotlib seaborn streamlit
 pip install opencv-python face_recognition insightface onnxruntime
 ```
 
-Notes:
+Note:
 - `face_recognition` depends on **dlib** and may require CMake and a C++ compiler.
 - `insightface` uses **ONNX Runtime**. CPU version (`onnxruntime`) is sufficient.
 - Use `onnxruntime-gpu` if CUDA is available.
