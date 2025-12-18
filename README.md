@@ -72,7 +72,7 @@ The transaction data is **not directly collected from a POS system**.
 Instead, it is **manually generated using a Python script** to simulate real shop transactions based on customer visits.
 
 📄 **Sample Transaction File:**  
-👉 [View sample_transactions.csv](./dataset/sample_transactions.csv)
+👉 [View sample_transactions.csv](https://github.com/pavs123-gt/Water-Shop-Analytics/commit/28db762dc4b43cd89ffc55f1fcfa074b9b02e0af#diff-d7c020e97e0c05f2d0c5de198d7e67029b29bffec556d0c852585baf70f82190)
 
 ---
 
