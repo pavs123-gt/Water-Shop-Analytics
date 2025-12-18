@@ -123,9 +123,10 @@ WaterShopSystem/
 └── cctv.mp4                              → CCTV video input
 ```
 ---
-##  Setup & Installation
+## 🛠️ Setup & Installation
 
-Follow the steps below to set up the **Water Shop Monitoring & Analytics System**. This section includes **only environment setup and required libraries**, similar to your MFA example.
+Follow the steps below to set up the **Water Shop Monitoring & Analytics System**.
+This section includes only environment setup and required libraries.
 
 ---
 
@@ -157,17 +158,17 @@ pip install matplotlib seaborn streamlit
 ### 4️⃣ Install Computer Vision & Face Recognition Libraries
 
 ```bash
-pip install opencv-python face_recognition
+pip install opencv-python face_recognition insightface onnxruntime
 ```
 
-> ⚠️ `face_recognition` depends on **dlib**. If installation fails, ensure the following are installed:
->
-> * CMake
-> * C++ compiler (build-essential / Visual Studio Build Tools)
+Notes:
+- `face_recognition` depends on **dlib** and may require CMake and a C++ compiler.
+- `insightface` uses **ONNX Runtime**. CPU version (`onnxruntime`) is sufficient.
+- Use `onnxruntime-gpu` if CUDA is available.
 
 ---
 
-### 5️⃣ Install Backend / API Libraries (Optional)
+### 5️⃣ Install Backend / API Libraries
 
 ```bash
 pip install fastapi uvicorn
@@ -181,7 +182,7 @@ pip install fastapi uvicorn
 pip install sqlalchemy
 ```
 
-(Optional – for PostgreSQL)
+ (PostgreSQL):
 
 ```bash
 pip install psycopg2-binary
@@ -192,15 +193,15 @@ pip install psycopg2-binary
 ### 7️⃣ Verify Installation
 
 ```bash
-python -c "import cv2, face_recognition, pandas, numpy, matplotlib, streamlit; print('Environment setup successful')"
+python -c "import cv2, face_recognition, insightface, pandas, numpy, matplotlib, streamlit; print('Environment setup successful')"
 ```
 
 ---
 
-### ℹ️ Notes
+###  Notes
 
-* Python 3.8–3.10 is recommended.
-* Use Conda for easier installation of `dlib` and OpenCV.
-* TensorFlow is optional and only required for advanced or future enhancements.
-* Compatible with Linux, macOS, and Windows.
+- Recommended Python version: 3.8 – 3.10
+- Conda is recommended for easier installation of OpenCV and dlib
+- TensorFlow is optional and not required for the current implementation
+- Compatible with Linux, macOS, and Windows
 
