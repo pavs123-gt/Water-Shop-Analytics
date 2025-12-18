@@ -70,7 +70,7 @@ The CCTV footage used in this project is a **single continuous video of approxim
 The transaction data used in this project is stored in a CSV file generated manually using a Python script to simulate real water shop transactions.
 
 📄 **Transaction Dataset:**  
-👉 [View sample_transactions.csv](./dataset/sample_transactions.csv)
+👉 [View sample_transactions.csv](https://github.com/pavs123-gt/Water-Shop-Analytics/blob/main/sample_transactions.csv)
 
 The `sample_transactions.csv` file contains **one row per customer transaction** and includes the following fields:
 
