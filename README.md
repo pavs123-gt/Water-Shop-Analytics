@@ -103,51 +103,39 @@ python general_sample_transaction.py
 
 ---
 WaterShopSystem/
-├── cctv.mp4
-├── generate_sample_transaction.py           # Generates sample_transaction.csv
-├── sample_transaction.csv                   # Generated file
-├── detection.py                             # Generates frames and detected_faces
-├── frames/                                  # Generated frames from video
-├── detected_faces/                          # Cropped faces from frames
-├── face_recognition_pipeline.py             # Generates customer_embeddings.pkl and recognition results
-├── customer_embeddings.pkl                  # Generated embeddings
-├── recognition_results.csv                  # Generated recognition results
-├── run_visit_tracking_hog.py                # Generates visit_log.csv
-├── visit_log.csv                             # Generated visit logs
-├── m_r_v.py                                 # Generates unique_customers.csv
-├── unique_customers.csv                      # Generated file
-├── visit_analytics.py                        # Generates daily, monthly, quarterly visits and repeat visits
-├── daily_visits.csv                          # Generated
-├── monthly_visits.csv                        # Generated
-├── quarterly_visits.csv                      # Generated
-├── repeat_visits.csv                          # Generated
-├── new_vs_returning_customers.py             # Generates customer visit counts and new/returning customers
-├── customer_visit_counts.csv                 # Generated
-├── new_customers.csv                          # Generated
-├── returning_customers.csv                   # Generated
-├── payment_and_can_analytics.py              # Generates analytics reports
-├── analytics_report.xlsx                      # Generated
-├── shop_activity_insights.xlsx                # Generated
-├── total_spend_per_customer.png               # Generated chart
-├── test_first_last_customers.csv              # Generated
-├── test_traffic_per_hour.csv                  # Generated
-├── plot_analytics_charts.py                   # Generates charts
-├── pie_vs_new_returning.png                    # Generated
-├── bar_top_customers.png                       # Generated
-├── bar_visits_per_hour.png                     # Generated
-├── line_daily_visits.png                       # Generated
-├── test_visit_tracking.py                      # Generates test visit files
-├── test_visit_counts.csv                       # Generated
-├── test_repeat_visitors.csv                    # Generated
-├── test_transaction.py                         # Generates test transaction files
-├── test_total_spent.csv                         # Generated
-├── test_payment_summary.csv                     # Generated
-├── test_unpaid.csv                              # Generated
-├── test_repeat_defaulters.csv                   # Generated
-├── test_can_shop_activity.py                    # Generates can activity reports
-├── test_can_per_customer.csv                     # Generated
-├── test_can_per_day.csv                          # Generated
-├── dashboard.py                                 # Streamlit dashboard
-├── dashboard_final.py                           # Final version of dashboard
-└── README.md                                    # Project description 
+├── cctv.mp4                                  # Input video
+├── generate_sample_transaction.py            # Generates sample_transaction.csv
+│   └── Output: sample_transaction.csv
+├── detection.py                              # Generates frames and cropped faces
+│   └── Output: frames/, detected_faces/
+├── face_recognition_pipeline.py             # Performs face recognition
+│   └── Input: frames/, detected_faces/
+│   └── Output: customer_embeddings.pkl, recognition_results.csv
+├── run_visit_tracking_hog.py                # Tracks customer visits
+│   └── Input: recognition_results.csv
+│   └── Output: visit_log.csv
+├── m_r_v.py                                  # Generates unique customers
+│   └── Input: visit_log.csv
+│   └── Output: unique_customers.csv
+├── visit_analytics.py                        # Analyzes visits
+│   └── Input: visit_log.csv
+│   └── Output: daily_visits.csv, monthly_visits.csv, quarterly_visits.csv, repeat_visits.csv
+├── new_vs_returning_customers.py             # Classifies new vs returning customers
+│   └── Input: visit_log.csv
+│   └── Output: customer_visit_counts.csv, new_customers.csv, returning_customers.csv
+├── payment_and_can_analytics.py              # Generates sales & can analytics
+│   └── Input: sample_transaction.csv, visit_log.csv
+│   └── Output: analytics_report.xlsx, shop_activity_insights.xlsx, total_spend_per_customer.png, test_first_last_customers.csv, test_traffic_per_hour.csv
+├── plot_analytics_charts.py                  # Plots charts
+│   └── Input: analytics_report.xlsx, shop_activity_insights.xlsx
+│   └── Output: pie_vs_new_returning.png, bar_top_customers.png, bar_visits_per_hour.png, line_daily_visits.png
+├── test_visit_tracking.py                     # Test visit tracking
+│   └── Output: test_visit_counts.csv, test_repeat_visitors.csv
+├── test_transaction.py                        # Test transactions
+│   └── Output: test_total_spent.csv, test_payment_summary.csv, test_unpaid.csv, test_repeat_defaulters.csv
+├── test_can_shop_activity.py                  # Test can shop activity
+│   └── Output: test_can_per_customer.csv, test_can_per_day.csv
+├── dashboard.py                               # Streamlit dashboard
+├── dashboard_final.py                         # Final version of dashboard
+└── README.md                                  # Project description
 
