@@ -438,7 +438,7 @@ All visualizations are created from processed CSV outputs produced during the pi
 
 Shows the most frequent customers based on total visit count, helping identify loyal and high-engagement customers.
 
-![Top Customers by Visit Count](analytics/bar_top_customers.png)
+![Top Customers by Visit Count](https://github.com/pavs123-gt/Water-Shop-Analytics/blob/main/bar_top_customers.png)
 
 ---
 
