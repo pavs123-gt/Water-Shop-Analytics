@@ -591,17 +591,13 @@ The following enhancements can be implemented to extend the functionality, scala
 
 These enhancements will help transform the system into a **fully automated, scalable, and intelligent water shop management platform**.
 
-## Author
+## 👤 Author
 
-**Pavani Linguberi**
+**Linguberi Pavani**  
+B.Tech Student  
+linguberipavani3@gmail.com
 
--  Role: Data Analytics & Computer Vision Project Developer  
--  Focus Areas: Computer Vision, Facial Recognition, Data Analytics, Dashboard Visualization  
--  Technologies: Python, OpenCV, InsightFace, Pandas, Streamlit, SQL  
--  Project: Water Shop Monitoring & Analytics System  
-
-This project was developed as part of an end-to-end analytics solution integrating CCTV-based customer recognition, visit tracking, transaction analysis, and dashboard visualization.
-
+🔗 GitHub: https://github.com/pavs123-gt
 
 
 
