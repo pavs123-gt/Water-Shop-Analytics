@@ -510,10 +510,10 @@ These scripts read the processed analytics CSV files and render interactive and 
 ### ▶️ Run the Dashboard
 
 ```bash
-python dashboard.py
+streamlit run  dashboard.py
 ```
 ```bash
-python dashboard_final.py
+streamlit run dashboard_final.py
 ```
 
 
