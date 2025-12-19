@@ -446,7 +446,7 @@ Shows the most frequent customers based on total visit count, helping identify l
 
 Displays hourly footfall distribution to identify peak and low-traffic hours for operational planning.
 
-![Visits per Hour](analytics/bar_visits_per_hour.png)
+![Visits per Hour](https://github.com/pavs123-gt/Water-Shop-Analytics/blob/main/bar_visits_per_hour.png)
 
 ---
 
@@ -454,7 +454,7 @@ Displays hourly footfall distribution to identify peak and low-traffic hours for
 
 Illustrates daily customer visit trends over time to monitor shop activity patterns.
 
-![Daily Visits](analytics/line_daily_visits.png)
+![Daily Visits](https://github.com/pavs123-gt/Water-Shop-Analytics/blob/main/line_daily_visits.png)
 
 ---
 
@@ -462,7 +462,7 @@ Illustrates daily customer visit trends over time to monitor shop activity patte
 
 Breakdown of new customers versus returning customers, useful for retention and growth analysis.
 
-![New vs Returning Customers](analytics/pie_new_vs_returning.png)
+![New vs Returning Customers](https://github.com/pavs123-gt/Water-Shop-Analytics/blob/main/pie_new_vs_returning.png)
 
 ---
 
@@ -470,7 +470,7 @@ Breakdown of new customers versus returning customers, useful for retention and 
 
 Shows total amount spent by each customer, enabling identification of high-value customers.
 
-![Total Spend per Customer](analytics/total_spend_per_customer.png)
+![Total Spend per Customer](https://github.com/pavs123-gt/Water-Shop-Analytics/blob/main/total_spend_per_customer.png)
 
 ---
 
