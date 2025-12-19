@@ -613,9 +613,11 @@ These enhancements will help transform the system into a **fully automated, scal
 
 **Linguberi Pavani**  
 B.Tech Student  
+Water-Shop-Analytics
 linguberipavani3@gmail.com
 
-🔗 GitHub: https://github.com/pavs123-gt
+
+
 
 
 
