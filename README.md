@@ -397,20 +397,26 @@ The Water Shop Monitoring & Analytics System follows a structured pipeline to pr
 **Process**
 - Validate analytics logic
 - Verify data consistency and correctness
+  
 **Scripts**
 - `test_visit_tracking.py`
+
 **Output**
 - `test_visit_counts.csv`
 - `test_repeat_visitors.csv`
+  
 **Scripts**
 - `test_transactions.py`
+  
  **Output**
 - `test_total_spent.csv`
 - `test_payment_summary.csv`
 - `test_unpaid.csv`
 - test_repeat_defaulters.csv
+  
 **Scripts**
 - `test_can_shop_activity.py`
+  
 **Output**
 - `test_can_per_customer.csv`
 - `test_cans_per_day.csv`
