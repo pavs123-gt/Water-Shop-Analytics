@@ -215,7 +215,7 @@ The Water Shop Monitoring & Analytics System follows a structured pipeline to pr
 ### 1. CCTV Video Input
 
 **Input**
-- CCTV video footage (`.mp4`, `.avi`)
+- CCTV video footage (`.mp4`)
 
 **Process**
 - Video ingestion for downstream processing
