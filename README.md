@@ -14,6 +14,7 @@ The system identifies customers using **facial recognition**, tracks visit frequ
 - [Setup & Installation](#setup--installation)
 - [Processing Pipeline](#processing-pipeline)
 - [Analytics & Reports](#analytics--reports)
+- [Evolution](#Evolution)
 - [Dashboard & Visualization](#dashboard--visualization)
 - [Tools Used](#tools-used)
 - [Future Enhancements](#future-enhancements)
@@ -478,6 +479,25 @@ Shows total amount spent by each customer, enabling identification of high-value
 - Highlights loyal and high-spending customers
 - Differentiates between new and returning customers
 - Supports data-driven decisions for shop operations and customer engagement
+
+
+## Evolution
+
+The project includes the following validation scripts:
+
+1. **recognition_validation.py**  
+   - Validates face recognition results  
+   - Calculates total recognitions, unique customers, and similarity scores  
+
+2. **transaction_link_validation.py**  
+   - Checks that all transactions are correctly linked to recognized customers  
+   - Ensures data consistency between `unique_customers.csv` and `sample_transactions.csv`  
+
+3. **Metrices.py** 
+   - Calculates approximate **accuracy, precision, and recall** for face recognition  
+   - Uses similarity thresholds to evaluate recognition quality
+
+
 
 ##  Dashboard & Visualization
 
