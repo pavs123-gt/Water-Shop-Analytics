@@ -555,7 +555,7 @@ The Water Shop Monitoring & Analytics System is built using the following tools 
 
 These tools collectively enable end-to-end processing—from CCTV video ingestion and face recognition to analytics generation and interactive dashboard visualization.
 
-## 🚀 Future Enhancements
+##  Future Enhancements
 
 The following enhancements can be implemented to extend the functionality, scalability, and intelligence of the Water Shop Monitoring & Analytics System:
 
@@ -591,6 +591,16 @@ The following enhancements can be implemented to extend the functionality, scala
 
 These enhancements will help transform the system into a **fully automated, scalable, and intelligent water shop management platform**.
 
+## Author
+
+**Pavani Linguberi**
+
+-  Role: Data Analytics & Computer Vision Project Developer  
+-  Focus Areas: Computer Vision, Facial Recognition, Data Analytics, Dashboard Visualization  
+-  Technologies: Python, OpenCV, InsightFace, Pandas, Streamlit, SQL  
+-  Project: Water Shop Monitoring & Analytics System  
+
+This project was developed as part of an end-to-end analytics solution integrating CCTV-based customer recognition, visit tracking, transaction analysis, and dashboard visualization.
 
 
 
