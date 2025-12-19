@@ -412,7 +412,7 @@ The Water Shop Monitoring & Analytics System follows a structured pipeline to pr
 - `test_total_spent.csv`
 - `test_payment_summary.csv`
 - `test_unpaid.csv`
-- test_repeat_defaulters.csv
+- `test_repeat_defaulters.csv`
   
 **Scripts**
 - `test_can_shop_activity.py`
