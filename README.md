@@ -109,7 +109,6 @@ WaterShopSystem/
 ├── detection.py                         → Handles detection logic
 ├── face_recognition_pipeline.py         → Face recognition pipeline
 ├── run_visit_tracking_hog.py            → Visit tracking using HOG
-├── m_r_v.py                             → Monthly/Revenue/Visit analytics
 ├── visit_analytics.py                   → Analytics on customer visits
 ├── new_vs_returning_customers.py        → Compare new vs returning customers
 ├── payment_and_can_analytics.py         → Payment and can purchase analytics
