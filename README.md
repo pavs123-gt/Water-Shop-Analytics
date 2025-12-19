@@ -553,21 +553,6 @@ The Water Shop Monitoring & Analytics System is built using the following tools 
 - **FastAPI** – API development for analytics and data access.
 - **Uvicorn** – ASGI server for running FastAPI services.
 
-
-
-
----
-
-
-
----
-
-### 🔹 Dashboard Execution
-- **dashboard.py** – Generates and visualizes analytics dashboards.
-- **dashboard_final.py** – Final consolidated dashboard for can analytics and customer insights.
-
----
-
 These tools collectively enable end-to-end processing—from CCTV video ingestion and face recognition to analytics generation and interactive dashboard visualization.
 
 
