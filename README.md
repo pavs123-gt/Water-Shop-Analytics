@@ -549,7 +549,7 @@ The Water Shop Monitoring & Analytics System is built using the following tools 
 
 ---
 
-### 🔹 Backend & APIs (Optional)
+### 🔹 Backend & APIs 
 - **FastAPI** – API development for analytics and data access.
 - **Uvicorn** – ASGI server for running FastAPI services.
 
@@ -558,10 +558,7 @@ The Water Shop Monitoring & Analytics System is built using the following tools 
 
 ---
 
-### 🔹 Development & Environment
-- **Conda** – Environment and dependency management.
-- **pip** – Python package installation.
-- **Git & GitHub** – Version control and project hosting.
+
 
 ---
 
