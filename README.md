@@ -481,8 +481,40 @@ Shows total amount spent by each customer, enabling identification of high-value
 - Differentiates between new and returning customers
 - Supports data-driven decisions for shop operations and customer engagement
 
+##  Dashboard & Visualization
 
+The dashboard in this project is **generated dynamically** using Python scripts.  
+It is **not a static output file**. Instead, the visualizations are rendered **at runtime** when the dashboard scripts are executed.
 
+---
+
+### 📌 Dashboard Scripts
+
+The following scripts are responsible for dashboard generation:
+
+- `dashboard.py`
+- `dashboard_final.py`
+
+These scripts read the processed analytics CSV files and render interactive and visual dashboards.
+
+---
+
+### ▶️ How the Dashboard Works
+
+- When the script is executed, the dashboard **opens automatically**
+- Visualizations are rendered directly on the screen
+- No manual image generation or upload is required
+
+---
+
+### ▶️ Run the Dashboard
+
+```bash
+python dashboard.py
+```
+```bash
+python dashboard_final.py
+```
 
 
 
