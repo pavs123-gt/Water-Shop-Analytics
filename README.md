@@ -209,113 +209,110 @@ python -c "import cv2, face_recognition, insightface, pandas, numpy, matplotlib,
 
 The Water Shop Monitoring & Analytics System follows a structured pipeline to process CCTV footage and transaction data, generate analytics, and visualize insights through dashboards.
 
----
-
-```md
-## 🔄 Processing & Pipeline
-
-The following section describes the **end-to-end processing pipeline** of the Water Shop Monitoring & Analytics System. Each stage is ordered sequentially with clearly defined inputs and outputs.
 
 ---
 
-### 1️⃣ CCTV Video Input
+### 1. CCTV Video Input
 
-**Input:**
-- CCTV video footage (`.mp4` / `.avi`)
+**Input**
+- CCTV video footage (`.mp4`, `.avi`)
 
-**Process:**
+**Process**
 - Video ingestion for downstream processing
 
-**Output:**
+**Output**
 - Raw video stream
 
 ---
 
-### 2️⃣ Frame Extraction
+### 2. Frame Extraction
 
-**Script:** `pipeline.py`
+**Script**
+- `pipeline.py`
 
-**Input:**
+**Input**
 - CCTV video footage
 
-**Process:**
-- Extract frames at fixed intervals
+**Process**
+- Extract frames from video at fixed intervals
 
-**Output:**
-- Extracted image frames (`frames/`)
+**Output**
+- Extracted image frames (`frames/` directory)
 
 ---
 
-### 3️⃣ Face Detection
+### 3. Face Detection
 
-**Script:** `detect_faces.py`
+**Script**
+- `detect_faces.py`
 
-**Input:**
+**Input**
 - Extracted frames
 
-**Process:**
+**Process**
 - Detect faces in each frame
-- Draw bounding boxes
+- Draw bounding boxes around detected faces
 
-**Output:**
+**Output**
 - Frames with face bounding boxes
 - Cropped detected face images
 
 ---
 
-### 4️⃣ Face Recognition
+### 4. Face Recognition
 
-**Scripts:**
+**Scripts**
 - `face_recognition_pipeline.py`
 - `init_db.py`
 
-**Input:**
-- Frames with detected faces
+**Input**
+- Frames containing detected faces
 
-**Process:**
+**Process**
 - Generate face embeddings
-- Compare embeddings with database
+- Compare embeddings with stored database
 - Assign unique customer IDs
 
-**Output:**
+**Output**
 - `customer_embeddings.pkl`
 - `recognition_results.csv`
 - `unique_customers.csv`
 
 ---
 
-### 5️⃣ Visit Tracking
+### 5. Visit Tracking
 
-**Scripts:**
+**Scripts**
 - `visit_tracking.py`
 - `run_visit_tracking.py`
 - `run_visit_tracking_hog.py`
 
-**Input:**
-- Recognition results
+**Input**
+- Face recognition results
 
-**Process:**
-- Track customer entry and exit
-- Match faces across frames using similarity
+**Process**
+- Track customer entry and exit events
+- Match faces across frames using similarity scores
 
-**Output:**
+**Output**
 - `visit_log.csv`
-- Entry time, exit time, visit duration
+- Customer entry time, exit time, and visit duration
 
 ---
 
-### 6️⃣ Visit Analytics
+### 6. Visit Analytics
 
-**Script:** `visit_analytics.py`
+**Script**
+- `visit_analytics.py`
 
-**Input:**
+**Input**
 - `visit_log.csv`
 
-**Process:**
+**Process**
 - Aggregate visit data
-- Identify visit patterns
+- Identify visit frequency and patterns
 
-**Output:**
+**Output**
 - `daily_visits.csv`
 - `monthly_visits.csv`
 - `quarterly_visits.csv`
@@ -323,19 +320,20 @@ The following section describes the **end-to-end processing pipeline** of the Wa
 
 ---
 
-### 7️⃣ Payment & Can Analytics
+### 7. Payment and Can Analytics
 
-**Script:** `payment_and_can_analytics.py`
+**Script**
+- `payment_and_can_analytics.py`
 
-**Input:**
+**Input**
 - `sample_transactions.csv`
 
-**Process:**
-- Analyze payment modes
-- Calculate total spend
-- Track cans sold
+**Process**
+- Analyze payment modes (cash, UPI, coin)
+- Calculate total amount spent per customer
+- Track cans sold per day and per customer
 
-**Output:**
+**Output**
 - `test_payment_summary.csv`
 - `test_total_spent.csv`
 - `test_unpaid.csv`
@@ -345,87 +343,100 @@ The following section describes the **end-to-end processing pipeline** of the Wa
 
 ---
 
-### 8️⃣ Customer Segmentation
+### 8. Customer Segmentation
 
-**Script:** `new_vs_returning_customers.py`
+**Script**
+- `new_vs_returning_customers.py`
 
-**Input:**
+**Input**
 - `recognition_results.csv`
 - `customer_visit_counts.csv`
 
-**Process:**
-- Identify new vs returning customers
+**Process**
+- Classify customers as new or returning
 
-**Output:**
+**Output**
 - `new_customers.csv`
 - `returning_customers.csv`
 
 ---
 
-### 9️⃣ Traffic & Shop Activity Analysis
+### 9. Traffic and Shop Activity Analysis
 
-**Process:**
-- Analyze hourly traffic
-- Identify first and last customer
+**Process**
+- Analyze hourly customer traffic
+- Identify first and last customer of the day
 
-**Output:**
+**Output**
 - `test_traffic_per_hours.csv`
 - `rest_first_last_customer.csv`
 
 ---
 
-### 🔟 Visualization & Dashboard
+### 10. Visualization and Dashboard
 
-**Scripts:**
+**Scripts**
 - `plot_analytics_charts.py`
 - `dashboard.py`
 - `dashboard_final.py`
 
-**Input:**
+**Input**
 - All generated analytics CSV files
 
-**Process:**
-- Generate charts and dashboards
+**Process**
+- Generate visual analytics and dashboards
 
-**Output:**
-- Line charts, bar charts, pie charts
+**Output**
+- Line charts, bar charts, and pie charts
 - Interactive analytics dashboard
 
 ---
 
-### 1️⃣1️⃣ Testing & Validation
+### 11. Testing and Validation
 
-**Scripts:**
+**Scripts**
 - `test_visit_tracking.py`
 - `test_transactions.py`
 - `test_can_per_customer.py`
 
-**Process:**
-- Validate analytics accuracy
-- Verify data consistency
+**Process**
+- Validate analytics logic
+- Verify data consistency and correctness
 
-**Output:**
+**Output**
 - Test CSV reports
-- Validation status
+- Validation results
 
 ---
 
-### ✅ Pipeline Completion
+### Pipeline Completion
 
-Successful execution confirms:
+Successful execution of the pipeline confirms:
 
-```
 
-Video processed successfully
-Customer recognition completed
-Visit tracking generated
-Analytics and reports created
-Dashboard ready for visualization
 
-```
 
-This concludes the complete processing pipeline of the Water Shop Monitoring & Analytics System.
-```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
