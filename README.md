@@ -516,6 +516,63 @@ streamlit run  dashboard.py
 streamlit run dashboard_final.py
 ```
 
+##  Tools Used
+
+The Water Shop Monitoring & Analytics System is built using the following tools and technologies across different stages of the pipeline.
+
+---
+
+### 🔹 Programming Language
+- **Python** – Core language used for video processing, analytics, and dashboard development.
+
+---
+
+### 🔹 Computer Vision & Face Recognition
+- **OpenCV** – Video processing, frame extraction, and face detection.
+- **face_recognition (dlib-based)** – Face encoding and customer identification.
+- **InsightFace** – Deep learning–based face recognition using ONNX models.
+- **ONNX Runtime** – Efficient inference for InsightFace models.
+
+---
+
+### 🔹 Data Processing & Analytics
+- **pandas** – Data cleaning, transformation, aggregation, and CSV processing.
+- **NumPy** – Numerical computations and array operations.
+- **scikit-learn** – Similarity matching and basic analytics support.
+
+---
+
+### 🔹 Visualization
+- **matplotlib** – Line charts, bar charts, and pie charts for analytics outputs.
+- **seaborn** – Enhanced statistical visualizations (optional).
+- **Streamlit** – Interactive dashboard creation and real-time visualization.
+
+---
+
+### 🔹 Backend & APIs (Optional)
+- **FastAPI** – API development for analytics and data access.
+- **Uvicorn** – ASGI server for running FastAPI services.
+
+
+
+
+---
+
+### 🔹 Development & Environment
+- **Conda** – Environment and dependency management.
+- **pip** – Python package installation.
+- **Git & GitHub** – Version control and project hosting.
+
+---
+
+### 🔹 Dashboard Execution
+- **dashboard.py** – Generates and visualizes analytics dashboards.
+- **dashboard_final.py** – Final consolidated dashboard for can analytics and customer insights.
+
+---
+
+These tools collectively enable end-to-end processing—from CCTV video ingestion and face recognition to analytics generation and interactive dashboard visualization.
+
 
 
 
