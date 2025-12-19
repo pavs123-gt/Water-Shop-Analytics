@@ -205,141 +205,227 @@ python -c "import cv2, face_recognition, insightface, pandas, numpy, matplotlib,
 - TensorFlow is optional and not required for the current implementation
 - Compatible with Linux, macOS, and Windows
 ---
-## 🔄 Processing & Pipeline
+##  Processing & Pipeline
 
 The Water Shop Monitoring & Analytics System follows a structured pipeline to process CCTV footage and transaction data, generate analytics, and visualize insights through dashboards.
 
 ---
 
-### 1️⃣ Data Ingestion
+```md
+## 🔄 Processing & Pipeline
 
-**Input Sources:**
-- CCTV video footage (MP4)
-- Transaction data (CSV)
-- Visit logs and validation files (CSV)
-
-**Data Includes:**
-- Customer visit timestamps
-- Payment mode (Cash / UPI / Coin)
-- Number of water cans
-- Transaction amount
-- Unpaid / pending status
+The following section describes the **end-to-end processing pipeline** of the Water Shop Monitoring & Analytics System. Each stage is ordered sequentially with clearly defined inputs and outputs.
 
 ---
 
-### 2️⃣ Video Processing Pipeline
+### 1️⃣ CCTV Video Input
 
-1. Extract frames from CCTV footage
-2. Detect faces in each frame using OpenCV
-3. Generate face embeddings using InsightFace / face_recognition
-4. Match embeddings with stored customer embeddings
-5. Assign unique customer IDs
-6. Log visit timestamp for each recognized customer
+**Input:**
+- CCTV video footage (`.mp4` / `.avi`)
+
+**Process:**
+- Video ingestion for downstream processing
 
 **Output:**
-- recognition_results.csv
-- visit_log.csv
-- customer_visit_counts.csv
+- Raw video stream
 
 ---
 
-### 3️⃣ Visit Analytics Processing
+### 2️⃣ Frame Extraction
 
-1. Aggregate visit logs
-2. Count visits per:
-   - Day
-   - Month
-   - Quarter
-3. Identify:
-   - New customers
-   - Returning customers
-   - Repeat visitors
+**Script:** `pipeline.py`
 
-**Output Files:**
-- daily_visits.csv
-- monthly_visits.csv
-- quarterly_visits.csv
-- new_customers.csv
-- returning_customers.csv
-- visit_validation.csv
+**Input:**
+- CCTV video footage
+
+**Process:**
+- Extract frames at fixed intervals
+
+**Output:**
+- Extracted image frames (`frames/`)
 
 ---
 
-### 4️⃣ Transaction & Payment Processing
+### 3️⃣ Face Detection
 
-1. Load transaction CSV data
-2. Link transactions to customer IDs
-3. Analyze payment modes
-4. Identify unpaid transactions
-5. Detect repeat defaulters
+**Script:** `detect_faces.py`
 
-**Output Files:**
-- sample_transactions.csv
-- test_payment_summary.csv
-- test_unpaid.csv
-- test_repeat_defaulters.csv
-- test_total_spent.csv
+**Input:**
+- Extracted frames
 
----
+**Process:**
+- Detect faces in each frame
+- Draw bounding boxes
 
-### 5️⃣ Can Analytics Processing
-
-1. Extract can quantity per transaction
-2. Aggregate total cans per customer
-3. Aggregate total cans per day
-
-**Output Files:**
-- test_cans_per_customer.csv
-- test_cans_per_day.csv
+**Output:**
+- Frames with face bounding boxes
+- Cropped detected face images
 
 ---
 
-### 6️⃣ Traffic & Shop Activity Analysis
+### 4️⃣ Face Recognition
 
-1. Analyze visit timestamps
-2. Detect peak and idle hours
-3. Identify first and last customer of the day
-4. Estimate shop opening and closing times
+**Scripts:**
+- `face_recognition_pipeline.py`
+- `init_db.py`
 
-**Output Files:**
-- test_traffic_per_hours.csv
-- rest_first_last_customer.csv
+**Input:**
+- Frames with detected faces
 
----
+**Process:**
+- Generate face embeddings
+- Compare embeddings with database
+- Assign unique customer IDs
 
-### 7️⃣ Analytics Validation & Testing
-
-1. Cross-check visit counts
-2. Validate repeat visitor logic
-3. Verify unpaid and defaulter tagging
-4. Run test scripts for consistency
-
-**Test Files:**
-- test_visit_counts.csv
-- test_repeat_visitors.csv
-- test_visit_tracking.py
-- test_transactions.py
+**Output:**
+- `customer_embeddings.pkl`
+- `recognition_results.csv`
+- `unique_customers.csv`
 
 ---
 
-### 8️⃣ Dashboard & Visualization Pipeline
+### 5️⃣ Visit Tracking
 
-1. Load all processed CSV outputs
-2. Generate visual analytics:
-   - Visit trends
-   - Customer behavior
-   - Can consumption
-   - Payment summaries
-3. Render interactive dashboard
+**Scripts:**
+- `visit_tracking.py`
+- `run_visit_tracking.py`
+- `run_visit_tracking_hog.py`
 
-**Dashboard Scripts:**
-- dashboard.py
-- dashboard_final.py
+**Input:**
+- Recognition results
 
-**Final Outputs:**
-- Integrated analytics dashboard
-- Business insights for shop operations
+**Process:**
+- Track customer entry and exit
+- Match faces across frames using similarity
+
+**Output:**
+- `visit_log.csv`
+- Entry time, exit time, visit duration
 
 ---
+
+### 6️⃣ Visit Analytics
+
+**Script:** `visit_analytics.py`
+
+**Input:**
+- `visit_log.csv`
+
+**Process:**
+- Aggregate visit data
+- Identify visit patterns
+
+**Output:**
+- `daily_visits.csv`
+- `monthly_visits.csv`
+- `quarterly_visits.csv`
+- `repeat_visits.csv`
+
+---
+
+### 7️⃣ Payment & Can Analytics
+
+**Script:** `payment_and_can_analytics.py`
+
+**Input:**
+- `sample_transactions.csv`
+
+**Process:**
+- Analyze payment modes
+- Calculate total spend
+- Track cans sold
+
+**Output:**
+- `test_payment_summary.csv`
+- `test_total_spent.csv`
+- `test_unpaid.csv`
+- `test_repeat_defaulters.csv`
+- `test_cans_per_day.csv`
+- `test_cans_per_customer.csv`
+
+---
+
+### 8️⃣ Customer Segmentation
+
+**Script:** `new_vs_returning_customers.py`
+
+**Input:**
+- `recognition_results.csv`
+- `customer_visit_counts.csv`
+
+**Process:**
+- Identify new vs returning customers
+
+**Output:**
+- `new_customers.csv`
+- `returning_customers.csv`
+
+---
+
+### 9️⃣ Traffic & Shop Activity Analysis
+
+**Process:**
+- Analyze hourly traffic
+- Identify first and last customer
+
+**Output:**
+- `test_traffic_per_hours.csv`
+- `rest_first_last_customer.csv`
+
+---
+
+### 🔟 Visualization & Dashboard
+
+**Scripts:**
+- `plot_analytics_charts.py`
+- `dashboard.py`
+- `dashboard_final.py`
+
+**Input:**
+- All generated analytics CSV files
+
+**Process:**
+- Generate charts and dashboards
+
+**Output:**
+- Line charts, bar charts, pie charts
+- Interactive analytics dashboard
+
+---
+
+### 1️⃣1️⃣ Testing & Validation
+
+**Scripts:**
+- `test_visit_tracking.py`
+- `test_transactions.py`
+- `test_can_per_customer.py`
+
+**Process:**
+- Validate analytics accuracy
+- Verify data consistency
+
+**Output:**
+- Test CSV reports
+- Validation status
+
+---
+
+### ✅ Pipeline Completion
+
+Successful execution confirms:
+
+```
+
+Video processed successfully
+Customer recognition completed
+Visit tracking generated
+Analytics and reports created
+Dashboard ready for visualization
+
+```
+
+This concludes the complete processing pipeline of the Water Shop Monitoring & Analytics System.
+```
+
 
 
